@@ -1,0 +1,197 @@
+/* تنظیمات پایه */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #F5F5DC; /* رنگ زمینه کرم روشن */
+  color: #333;
+  direction: rtl; /* جهت راست به چپ */
+  padding: 20px;
+  margin: 0;
+}
+
+/* هدر */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  background-color: #8B4513; /* قهوه‌ای */
+  padding: 15px 0;
+  color: white;
+}
+
+/* منوی ناوبری */
+nav {
+  margin-bottom: 30px;
+  text-align: center;
+}
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #8B4513;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #DAA520; /* طلایی */
+}
+
+/* بخش گالری با Grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+/* کارت ضرب‌المثل */
+.card {
+  background-color: #DAA520; /* طلایی */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.15);
+  position: relative;
+  cursor: pointer;
+  font-family: 'Noto Serif', serif;
+  color: #4B2E00; /* قهوه‌ای تیره */
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* متن ضرب‌المثل اصلی */
+.proverb-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* ترجمه ضرب‌المثل */
+.proverb-translation {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+/* معنی ضرب‌المثل که روی هاور نمایش داده می‌شود */
+.proverb-meaning {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  background: rgba(139,69,19,0.9); /* قهوه‌ای با شفافیت */
+  color: #fff;
+  padding: 15px;
+  font-size: 1rem;
+  line-height: 1.4;
+  transition: bottom 0.4s ease;
+  border-radius: 0 0 10px 10px;
+}
+.card:hover .proverb-meaning {
+  bottom: 0;
+}
+
+/* لینک کامل کارت */
+a.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+/* تنظیمات پایه */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #F5F5DC; /* رنگ زمینه کرم روشن */
+  color: #333;
+  direction: rtl; /* جهت راست به چپ */
+  padding: 20px;
+  margin: 0;
+}
+
+/* هدر */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  background-color: #8B4513; /* قهوه‌ای */
+  padding: 15px 0;
+  color: white;
+}
+
+/* منوی ناوبری */
+nav {
+  margin-bottom: 30px;
+  text-align: center;
+}
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #8B4513;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #DAA520; /* طلایی */
+}
+
+/* بخش گالری با Grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+/* کارت ضرب‌المثل */
+.card {
+  background-color: #DAA520; /* طلایی */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.15);
+  position: relative;
+  cursor: pointer;
+  font-family: 'Noto Serif', serif;
+  color: #4B2E00; /* قهوه‌ای تیره */
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* متن ضرب‌المثل اصلی */
+.proverb-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* ترجمه ضرب‌المثل */
+.proverb-translation {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+/* معنی ضرب‌المثل که روی هاور نمایش داده می‌شود */
+.proverb-meaning {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  background: rgba(139,69,19,0.9); /* قهوه‌ای با شفافیت */
+  color: #fff;
+  padding: 15px;
+  font-size: 1rem;
+  line-height: 1.4;
+  transition: bottom 0.4s ease;
+  border-radius: 0 0 10px 10px;
+}
+.card:hover .proverb-meaning {
+  bottom: 0;
+}
+
+/* لینک کامل کارت */
+a.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}

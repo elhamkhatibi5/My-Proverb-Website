@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Afghan Proverbs - Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #F5F5DC;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+    header {
+      background-color: #8B4513;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      text-align: center;
+      margin-top: 10px;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #8B4513;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    nav a:hover {
+      color: #DAA520;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      margin-top: 30px;
+    }
+    .card {
+      background-color: #DAA520;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.15);
+      font-family: 'Noto Serif', serif;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .proverb-text {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .proverb-translation {
+      font-size: 1.1rem;
+      font-style: italic;
+    }
+    .proverb-meaning {
+      position: absolute;
+      bottom: -100%;
+      left: 0;
+      right: 0;
+      background: rgba(139,69,19,0.9);
+      color: #fff;
+      padding: 15px;
+      transition: bottom 0.4s ease;
+      font-size: 1rem;
+      border-radius: 0 0 10px 10px;
+    }
+    .card:hover .proverb-meaning {
+      bottom: 0;
+    }
+    .detail-link {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 12px;
+      background-color: #8B4513;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 0.9rem;
+    }
+    .detail-link:hover {
+      background-color: #A0522D;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ضرب‌المثل‌های افغانی</h1>
+    <p>مجموعه‌ای از حکمت‌ها و فرهنگ افغانستان</p>
+  </header>
+  <nav>
+    <a href="index.html">خانه</a>
+    <a href="gallery.html">گالری</a>
+    <a href="wall.html">دیوار تعامل</a>
+    <a href="detail.html">مشاهده جزئیات</a>
+
+  </nav>
+  <div class="gallery">
+    <div class="card">
+      <div class="proverb-text">صبوری کن، ترشی شیرین می‌شود</div>
+      <div class="proverb-translation">With patience, the sour turns sweet</div>
+      <a class="detail-link" href="detail.html?id=1">مشاهده جزئیات</a>
+      <div class="proverb-meaning">به صبر و حوصله در برابر مشکلات اشاره دارد، که در نهایت نتیجه شیرین خواهد داشت.</div>
+    </div>
+    <div class="card">
+      <div class="proverb-text">آب را گل‌آلود کن تا ماهی بگیری</div>
+      <div class="proverb-translation">Muddy the water to catch the fish</div>
+      <a class="detail-link" href="detail.html?id=2">مشاهده جزئیات</a>
+      <div class="proverb-meaning">برای رسیدن به هدف ممکن است برخی‌ها محیط را ناآرام کنند.</div>
+    </div>
+    <div class="card">
+      <div class="proverb-text">تا تنور گرم است نان را بچسبان</div>
+      <div class="proverb-translation">Strike while the iron is hot</div>
+      <a class="detail-link" href="detail.html?id=3">مشاهده جزئیات</a>
+      <div class="proverb-meaning">به موقع اقدام کردن و از فرصت‌ها بهره‌برداری کردن.</div>
+    </div>
+    <div class="card">
+      <div class="proverb-text">کار نیکو کردن از پر کردن است</div>
+      <div class="proverb-translation">Practice makes perfect</div>
+      <a class="detail-link" href="detail.html?id=4">مشاهده جزئیات</a>
+      <div class="proverb-meaning">برای رسیدن به مهارت و موفقیت باید مداومت و تمرین داشت.</div>
+    </div>
+  </div>
+  <footer style="text-align:center; margin-top:40px; font-size:0.9rem; color:#666;">
+    © 2025 تمامی حقوق این سایت و محتواهای آن محفوظ است.
+  </footer>
+</body>
+</html>
