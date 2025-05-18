@@ -15,44 +15,47 @@
       color: #333;
       line-height: 1.6;
       direction: rtl;
-    }/* هدر جدید */
-.main-header {
-  background: linear-gradient(135deg, #8B4513, #A0522D);
+    }header {
+  background-image: url('images/header.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: white;
-  padding: 1.5rem 1rem;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
-.main-header h1 {
-  font-size: 2.4rem;
-  margin-bottom: 0.2rem;
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.3rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
-.main-header h2 {
-  font-size: 1.1rem;
+header h2 {
   font-weight: normal;
-  opacity: 0.9;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-.main-nav {
-  background-color: #A0522D;
-}
-.main-nav ul {
+nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  gap: 2.5rem;
+  background-color: #8B4513;
   padding: 0.8rem 0;
-  gap: 2rem;
 }
-.main-nav ul li a {
+nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1rem;
+  font-family: Arial, sans-serif;
   transition: color 0.3s ease;
 }
-.main-nav ul li a:hover {
-  color: #FFD700;
+nav ul li a:hover {
+  color: #DAA520;
 }
 
 .intro {
@@ -117,7 +120,7 @@
 }
 
 @media (max-width: 480px) {
-  .main-header h1 {
+  header h1 {
     font-size: 2rem;
   }
   .proverb-card p:first-child {
@@ -130,20 +133,19 @@
 
   </style>
 </head>
-<body>  <header class="main-header">
-    <div class="container">
-      <h1>Afghan Proverbs</h1>
-      <h2>حکمت‌های دل افغانستان</h2>
-    </div>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html">خانه</a></li>
-        <li><a href="gallery.html">گالری</a></li>
-        <li><a href="wall.html">دیواز تعاملی</a></li>
-        <li><a href="detail.html">مشاهده جزئیات</a></li>
-      </ul>
-    </nav>
-  </header>  <section class="intro">
+<body>
+  <header>
+    <h1>Afghan Proverbs</h1>
+    <h2>حکمت‌های دل افغانستان</h2>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">خانه</a></li>
+      <li><a href="gallery.html">گالری</a></li>
+      <li><a href="wall.html">دیواز تعاملی</a></li>
+      <li><a href="detail.html">مشاهده جزئیات</a></li>
+    </ul>
+  </nav>  <section class="intro">
     <p>ضرب‌المثل‌های افغان، گفته‌هایی کوتاه و پربار هستند که نسل به نسل منتقل شده‌اند و فرهنگ، ارزش‌ها و خرد روزمره مردم افغانستان را بازتاب می‌دهند.</p>
   </section>  <section class="search-section">
     <input type="text" placeholder="جستجو در ضرب‌المثل‌ها..." />
@@ -158,5 +160,6 @@
     </div>
   </section>  <footer style="text-align:center; margin-top:40px; font-size:0.9rem; color:#666;">
     © 2025 تمامی حقوق این سایت و محتواهای آن محفوظ است.
-  </footer></body>
+  </footer>
+</body>
 </html>
