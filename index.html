@@ -1,11 +1,9 @@
-!DOCTYPE html>
-<html lang="fa">
+<!DOCTYPE html><html lang="fa">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Afghan Proverbs</title>
   <style>
-    /* تنظیمات پایه */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -13,153 +11,143 @@
     }
     body {
       font-family: Arial, sans-serif;
-      background-color: #f5f5dc; /* رنگ بژ */
+      background-color: #f5f5dc;
       color: #333;
       line-height: 1.6;
-      direction: rtl; /* راست‌چین */
-    }
+      direction: rtl;
+    }/* هدر جدید */
+.main-header {
+  background: linear-gradient(135deg, #8B4513, #A0522D);
+  color: white;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.main-header h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.2rem;
+}
+.main-header h2 {
+  font-size: 1.1rem;
+  font-weight: normal;
+  opacity: 0.9;
+}
 
-    /* هدر */
-    header {
-      background-color: #8B4513; /* قهوه‌ای */
-      color: white;
-      padding: 1.5rem 1rem;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.3rem;
-    }
-    header h2 {
-      font-weight: normal;
-      font-size: 1.2rem;
-    }
+.main-nav {
+  background-color: #A0522D;
+}
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0.8rem 0;
+  gap: 2rem;
+}
+.main-nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+.main-nav ul li a:hover {
+  color: #FFD700;
+}
 
-    /* منوی ناوبری افقی */
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 2.5rem;
-      background-color: #8B4513;
-      padding: 0.8rem 0;
-    }
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1rem;
-      font-family: Arial, sans-serif;
-      transition: color 0.3s ease;
-    }
-    nav ul li a:hover {
-      color: #DAA520; /* طلایی */
-    }
+.intro {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
 
-    /* مقدمه */
-    .intro {
-      max-width: 700px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      text-align: center;
-      font-size: 1.1rem;
-    }
+.search-section {
+  text-align: center;
+  margin: 2rem 0;
+}
+.search-section input {
+  padding: 0.6rem 1rem;
+  width: 80%;
+  max-width: 400px;
+  font-size: 1rem;
+  border: 2px solid #8B4513;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+.search-section input:focus {
+  border-color: #DAA520;
+}
 
-    /* جستجو */
-    .search-section {
-      text-align: center;
-      margin: 2rem 0;
-    }
-    .search-section input {
-      padding: 0.6rem 1rem;
-      width: 80%;
-      max-width: 400px;
-      font-size: 1rem;
-      border: 2px solid #8B4513;
-      border-radius: 5px;
-      outline: none;
-      transition: border-color 0.3s ease;
-    }
-    .search-section input:focus {
-      border-color: #DAA520;
-    }
+.featured {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto 3rem auto;
+  padding: 0 1rem;
+}
 
-    /* گرید ضرب‌المثل‌ها */
-    .featured {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      max-width: 900px;
-      margin: 0 auto 3rem auto;
-      padding: 0 1rem;
-    }
+.proverb-card {
+  background-color: #DAA520;
+  border-radius: 10px;
+  padding: 1.5rem 1.2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  cursor: default;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+.proverb-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+.proverb-card p:first-child {
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-bottom: 0.7rem;
+  font-family: 'Noto Serif', serif;
+}
+.proverb-card p:last-child {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #4B2E00;
+  font-family: Arial, sans-serif;
+}
 
-    /* کارت ضرب‌المثل */
-    .proverb-card {
-      background-color: #DAA520; /* طلایی */
-      border-radius: 10px;
-      padding: 1.5rem 1.2rem;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      cursor: default;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      text-align: center;
-    }
-    .proverb-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 10px rgba(0,0,0,0.15);
-    }
-    .proverb-card p:first-child {
-      font-weight: bold;
-      font-size: 1.3rem;
-      margin-bottom: 0.7rem;
-      font-family: 'Noto Serif', serif;
-    }
-    .proverb-card p:last-child {
-      font-style: italic;
-      font-size: 1.2rem;
-      color: #4B2E00; /* قهوه‌ای تیره */
-      font-family: Arial, sans-serif;
-    }
+@media (max-width: 480px) {
+  .main-header h1 {
+    font-size: 2rem;
+  }
+  .proverb-card p:first-child {
+    font-size: 1.1rem;
+  }
+  .proverb-card p:last-child {
+    font-size: 1rem;
+  }
+}
 
-    /* واکنش‌گرایی متن و اندازه */
-    @media (max-width: 480px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      .proverb-card p:first-child {
-        font-size: 1.1rem;
-      }
-      .proverb-card p:last-child {
-        font-size: 1rem;
-      }
-    }
   </style>
 </head>
-<body>
-
-  <header>
-    <h1>Afghan Proverbs</h1>
-    <h2>حکمت‌های دل افغانستان</h2>
-    <nav>
+<body>  <header class="main-header">
+    <div class="container">
+      <h1>Afghan Proverbs</h1>
+      <h2>حکمت‌های دل افغانستان</h2>
+    </div>
+    <nav class="main-nav">
       <ul>
-        <li><a href="index.html">خانه</li>
-          <li><a href="gallery.html">گالری</li>
-
+        <li><a href="index.html">خانه</a></li>
+        <li><a href="gallery.html">گالری</a></li>
         <li><a href="wall.html">دیواز تعاملی</a></li>
         <li><a href="detail.html">مشاهده جزئیات</a></li>
       </ul>
     </nav>
-  </header>
-
-  <section class="intro">
+  </header>  <section class="intro">
     <p>ضرب‌المثل‌های افغان، گفته‌هایی کوتاه و پربار هستند که نسل به نسل منتقل شده‌اند و فرهنگ، ارزش‌ها و خرد روزمره مردم افغانستان را بازتاب می‌دهند.</p>
-  </section>
-
-  <section class="search-section">
+  </section>  <section class="search-section">
     <input type="text" placeholder="جستجو در ضرب‌المثل‌ها..." />
-  </section>
-
-<section class="featured">
+  </section>  <section class="featured">
     <div class="proverb-card">
       <p>With patience, the sour turns sweet.</p>
       <p>با صبر، ترش شیرین می‌شود</p>
@@ -168,9 +156,7 @@
       <p>A single flower does not make spring.</p>
       <p>یک گل بهار نمی‌شود</p>
     </div>
-  </section>
-  <footer style="text-align:center; margin-top:40px; font-size:0.9rem; color:#666;">
+  </section>  <footer style="text-align:center; margin-top:40px; font-size:0.9rem; color:#666;">
     © 2025 تمامی حقوق این سایت و محتواهای آن محفوظ است.
-  </footer>
-</body>
+  </footer></body>
 </html>
